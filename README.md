@@ -45,8 +45,11 @@ code-only changes should be very quick.
 One of the main reasons I like this approach is that it makes the CI/CD process _very_ simple, and 
 allows the developer to mirror what exactly happens when they push their code.
 
-Feel free to have a go at building the code and how it copes with code changes (with regard to build
-times)
+Build the container and verify the output by performing some of the previous `curl` commands:
+
+```bash
+docker build -t employee-test .
+```
 
 #### Integration Testing
 
