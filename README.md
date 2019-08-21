@@ -136,4 +136,20 @@ _Note: Unfortunately, at the time of scribing this `JUnit5` support for `Cucumbe
 
 Have a go at running these tests (clicking on the play icon next to the above class will do this).
 
-For this challenge, try to create some new tests for some of the other end points.
+For this challenge, try to create some new tests for some of the other end points, for example:
+
+* Getting a single employee (will change the way in which we retrieve the content)
+* Removing an employee
+* Adding/Updating an employee content, e.g.
+
+```gherkin
+Then some step
+  | Name | Role |
+  | Bob  | Builder |
+```
+```java
+@Then("^some step$")
+public void someStep(List<Employee> employees) {
+    // Perform actions here
+}
+```
