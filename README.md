@@ -49,6 +49,7 @@ Build the container and verify the output by performing some of the previous `cu
 
 ```bash
 docker build -t employee-test .
+docker run -p 8080:8080 employee-test
 ```
 
 #### Integration Testing
