@@ -32,7 +32,7 @@ COPY src /usr/src/app/src
 RUN mvn clean package
 
 # Move artifact into slim container
-FROM openjdk:12-alpine
+FROM openjdk:13-alpine
 COPY --from=build /usr/src/app/target/rest-demo-2-1.0-SNAPSHOT.jar /usr/app/rest-demo-2-1.0-SNAPSHOT.jar
 EXPOSE 8080
 ENTRYPOINT ["java","-jar","/usr/app/rest-demo-2-1.0-SNAPSHOT.jar"]
