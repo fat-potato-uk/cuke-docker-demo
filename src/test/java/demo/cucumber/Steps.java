@@ -1,12 +1,12 @@
 package demo.cucumber;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import cucumber.api.java.en.And;
-import cucumber.api.java.en.Given;
-import cucumber.api.java.en.Then;
 import demo.Application;
 import demo.models.Employee;
 import demo.repositories.EmployeeRepository;
+import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
@@ -17,9 +17,6 @@ import java.util.stream.Collectors;
 import static java.util.Arrays.asList;
 import static junit.framework.TestCase.assertEquals;
 
-/**
- * Deprecated annotations used for compatibility with intelliJ plugin. :(
- */
 @Slf4j
 @ContextConfiguration(classes = Application.class)
 public class Steps {

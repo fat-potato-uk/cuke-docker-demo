@@ -1,0 +1,16 @@
+<enunciate basedir="src/main/java" buildDir="${enunciate.working.dir}">
+    <api-classes>
+<!--    <exclude pattern="toni.tim.controllers.StatusController”/>-->
+<!--    <exclude pattern="toni.tim.controllers.TaskingAdminController”/>-->
+<!--    <exclude pattern="toni.tim.controllers.TomLocationController”/>-->
+<!--    <exclude pattern="toni.tim.controllers.TomCallbackController”/>-->
+    </api-classes>
+    <title>Documentation</title>
+    <description>
+    To do
+    </description>
+    <modules>
+        <java-json-client disabled="true"/>
+        <java-xml-client disabled="true"/>
+    </modules>
+</enunciate>
