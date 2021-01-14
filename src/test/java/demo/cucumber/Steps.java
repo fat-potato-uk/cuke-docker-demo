@@ -7,6 +7,7 @@ import demo.repositories.EmployeeRepository;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import io.cucumber.spring.CucumberContextConfiguration;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
@@ -18,6 +19,7 @@ import static java.util.Arrays.asList;
 import static junit.framework.TestCase.assertEquals;
 
 @Slf4j
+@CucumberContextConfiguration
 @ContextConfiguration(classes = Application.class)
 public class Steps {
 
