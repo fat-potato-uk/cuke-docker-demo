@@ -20,7 +20,7 @@ go down the Maven Docker build process). If it's cost can be borne, it is very e
 For this challenge we will therefore be looking at the multi-stage Docker build process:
 
 ```dockerfile
-FROM maven:3.6.1-jdk-12 AS build
+FROM maven:3.6.3-openjdk-15 AS build
 
 # Resolve the dependencies as an independent layer first
 COPY pom.xml /usr/src/app/pom.xml
@@ -32,7 +32,7 @@ COPY src /usr/src/app/src
 RUN mvn clean package
 
 # Move artifact into slim container
-FROM openjdk:13-alpine
+FROM openjdk:15-alpine
 COPY --from=build /usr/src/app/target/rest-demo-2-1.0-SNAPSHOT.jar /usr/app/rest-demo-2-1.0-SNAPSHOT.jar
 EXPOSE 8080
 ENTRYPOINT ["java","-jar","/usr/app/rest-demo-2-1.0-SNAPSHOT.jar"]
@@ -86,6 +86,7 @@ The glue code run behind these steps looks like this:
 
 ```java
 @Slf4j
+@CucumberContextConfiguration
 @ContextConfiguration(classes = Application.class)
 public class Steps {
 
